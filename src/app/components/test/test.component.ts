@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiControllerService } from 'src/app/services/api-controller.service';
 
 @Component({
   selector: 'test-balise',
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService: ApiControllerService) { }
 
-  ngOnInit() {}
+  commune;
+
+  ngOnInit() {
+    this.commune = this.apiService.getCommunes()
+    console.log(this.commune);
+  }
 
 }

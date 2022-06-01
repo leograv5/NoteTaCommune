@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'commune',
+    loadChildren: () => import('./pages/commune/commune.module').then( m => m.CommunePageModule)
+  },
 ];
 
 @NgModule({
