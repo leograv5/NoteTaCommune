@@ -1,0 +1,14 @@
+<ion-card *ngFor="let commune of communes; let index = index">
+  <img src="https://unsplash.it/300/300" />
+  <ion-card-header>
+    <ion-card-title>
+      {{ commune.nom }}
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p>{{ index+1 }} Population : {{ commune.population }}</p>
+  </ion-card-content>
+</ion-card>
+<div *ngIf="!communes?.length">
+  empty
+</div>
