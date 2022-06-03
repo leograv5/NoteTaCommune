@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiControllerService } from 'src/app/services/api-controller.service';
 
+import { Communes, Commune } from 'src/app/interfaces/commune';
+
 @Component({
   selector: 'app-commune',
   templateUrl: './commune.component.html',
@@ -14,7 +16,10 @@ export class CommuneComponent implements OnInit {
 
   ngOnInit() {
     let communeObservable = this.apiService.getCommunes();
-    communeObservable.subscribe(val => this.communes = val);
+    communeObservable.subscribe((val: Communes) => {
+      this.communes = val;
+      console.log(val);
+    });
   }
 
 }
