@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { CommuneComponent } from 'src/app/components/commune/commune.component';
+import { CommunesComponent } from 'src/app/components/communes/communes.component';
 
 
 @NgModule({
@@ -15,7 +15,7 @@ import { CommuneComponent } from 'src/app/components/commune/commune.component';
     IonicModule,
     HomePageRoutingModule,
   ],
-  entryComponents: [CommuneComponent],
-  declarations: [HomePage, CommuneComponent],
+  entryComponents: [CommunesComponent],
+  declarations: [HomePage, CommunesComponent],
 })
 export class HomePageModule {}

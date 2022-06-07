@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'note-commune',
+    loadChildren: () => import('./pages/form-commune/form-commune.module').then( m => m.FormCommunePageModule)
+  },
 ];
 
 @NgModule({

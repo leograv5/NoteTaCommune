@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { CommuneComponent } from './commune.component';
+import { GeolocationComponent } from './geolocation.component';
 
-describe('CommuneComponent', () => {
-  let component: CommuneComponent;
-  let fixture: ComponentFixture<CommuneComponent>;
+describe('GeolocationComponent', () => {
+  let component: GeolocationComponent;
+  let fixture: ComponentFixture<GeolocationComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CommuneComponent ],
+      declarations: [ GeolocationComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CommuneComponent);
+    fixture = TestBed.createComponent(GeolocationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
