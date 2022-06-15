@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { CommunesComponent } from 'src/app/components/communes/communes.component';
+import { CommuneComponent } from 'src/app/components/commune/commune.component';
 
 
 @NgModule({
@@ -16,6 +17,6 @@ import { CommunesComponent } from 'src/app/components/communes/communes.componen
     HomePageRoutingModule,
   ],
   entryComponents: [CommunesComponent],
-  declarations: [HomePage, CommunesComponent],
+  declarations: [HomePage, CommunesComponent, CommuneComponent],
 })
 export class HomePageModule {}

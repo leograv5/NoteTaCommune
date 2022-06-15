@@ -9,6 +9,8 @@ import { FormCommunePageRoutingModule } from './form-commune-routing.module';
 import { FormCommunePage } from './form-commune.page';
 import { GeolocationComponent } from 'src/app/components/geolocation/geolocation.component';
 
+import { CommuneComponent } from 'src/app/components/commune/commune.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -16,7 +18,7 @@ import { GeolocationComponent } from 'src/app/components/geolocation/geolocation
     IonicModule,
     FormCommunePageRoutingModule,
   ],
-  declarations: [FormCommunePage, GeolocationComponent,]
+  declarations: [FormCommunePage, GeolocationComponent, CommuneComponent]
 })
 export class FormCommunePageModule {
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { concat, Observable } from 'rxjs';
 
 import { Commune } from 'src/app/interfaces/commune';
 
@@ -13,6 +13,10 @@ export class ApiControllerService {
 
   getCommunes() : Observable<Commune[]>{
     return this.http.get<Commune[]>("https://geo.api.gouv.fr/communes?codePostal=42300");
+  }
+
+  getCommuneFromCo(longitude: number, latitude: number): Observable<Commune> {
+    return this.http.get<Commune>("https://geo.api.gouv.fr/communes?lat="+ latitude +"&lon=" + longitude);
   }
 
   // Appel à notre API qui renvoie le top 5 des villes

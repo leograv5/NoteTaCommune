@@ -1,1 +1,2 @@
 <ion-button (click)="geolocateMe()">Je géolocalise ma commune</ion-button>
+<app-commune *ngIf="commune" [commune]="commune"></app-commune>
