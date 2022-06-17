@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Commune } from 'src/app/interfaces/commune';
+import { ApiControllerService } from 'src/app/services/api-controller.service';
 
 @Component({
   selector: 'app-commune',
@@ -8,10 +9,14 @@ import { Commune } from 'src/app/interfaces/commune';
 })
 export class CommuneComponent implements OnInit {
 
+  imageFileName;
+
   @Input() commune:Commune;
 
-  constructor() { }
+  constructor(private apiService: ApiControllerService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  
+  }
 
 }

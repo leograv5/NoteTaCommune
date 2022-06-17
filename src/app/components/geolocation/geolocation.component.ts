@@ -30,6 +30,9 @@ export class GeolocationComponent implements OnInit {
         this.commune = data[0];
       });
     });
+
+
+    this.apiService.getCommunePhoto("riorges");
     
 
   }

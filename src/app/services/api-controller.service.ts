@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { concat, Observable } from 'rxjs';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 import { Commune } from 'src/app/interfaces/commune';
 
@@ -50,5 +50,24 @@ export class ApiControllerService {
     ];
     
     return topCommunes; 
+  }
+
+  getCommunePhoto(communeName :string) :String {
+    this.http.get("https://en.wikipedia.org/w/api.php", {
+      headers: new HttpHeaders().set('Access-Control-Allow-Origin', 'Allow'),
+      params: new HttpParams().set('action', 'query')
+      .set('format', 'json')
+      .set('generator', 'search')
+      .set('gsrsearch', communeName)
+      .set("gsrnamespace", 0)
+      .set('gsrlimit', 1)
+      .set('prop', 'pageimages')
+      .set('piprop', 'thumbnail')
+      .set('pilimit', 'max')
+      .set('pithumbsize', 400)}).subscribe(data => {
+        console.log(data);
+      });
+
+    return "marche stp";
   }
 }
