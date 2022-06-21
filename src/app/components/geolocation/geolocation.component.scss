@@ -1,0 +1,26 @@
+.button-geolocate {
+    display:flex; 
+    justify-content:center;
+}
+
+ion-card {
+    width:90%;
+    display:inline-block;
+
+  text-align: center;
+}
+
+.geolocate-content {
+    max-width:70%; 
+    margin:0 auto 0 auto;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .geolocate-content {
+        display:flex; 
+        justify-content:center;
+        max-width:90%; 
+        margin:0 auto 0 auto;
+    }
+}

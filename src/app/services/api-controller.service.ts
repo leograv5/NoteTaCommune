@@ -54,7 +54,7 @@ export class ApiControllerService {
 
   getCommunePhoto(communeName :string) :String {
     this.http.get("https://en.wikipedia.org/w/api.php", {
-      headers: new HttpHeaders().set('Access-Control-Allow-Origin', 'Allow'),
+      headers: new HttpHeaders().append('Access-Control-Allow-Origin', '*'),
       params: new HttpParams().set('action', 'query')
       .set('format', 'json')
       .set('generator', 'search')

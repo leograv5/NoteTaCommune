@@ -1,2 +1,23 @@
-<ion-button (click)="geolocateMe()">Je géolocalise ma commune</ion-button>
-<app-commune *ngIf="commune" [commune]="commune"></app-commune>
+<div class="geolocate-content">
+    <ion-card>
+        <div class="button-geolocate">
+            <ion-button (click)="geolocateMe()">Je géolocalise ma commune</ion-button>
+        </div>
+        <ion-item *ngIf="commune" [commune]="commune">
+            <ion-thumbnail slot="start">
+                <img src="https://unsplash.it/150/150" />
+              </ion-thumbnail>
+              <ion-label>
+                <h3>{{ commune.nom }}</h3>
+                <p>{{ commune.code }}</p>
+                <p>Population : {{ commune.population }} habitants</p>   
+              </ion-label>
+            <div>
+                <div style="display:inline; width:30%">
+                </div>
+                <div style="display:inline; width:70%">
+                </div>
+            </div>
+        </ion-item>
+    </ion-card>
+</div>
