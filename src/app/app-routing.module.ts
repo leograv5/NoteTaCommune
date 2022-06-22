@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'note-commune',
     loadChildren: () => import('./pages/form-commune/form-commune.module').then( m => m.FormCommunePageModule)
   },
+  {
+    path: 'recherche',
+    loadChildren: () => import('./pages/recherche/recherche.module').then( m => m.RecherchePageModule)
+  },
 ];
 
 @NgModule({

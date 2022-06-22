@@ -1,23 +1,40 @@
 <div class="geolocate-content">
     <ion-card>
-        <div class="button-geolocate">
-            <ion-button (click)="geolocateMe()">Je géolocalise ma commune</ion-button>
-        </div>
-        <ion-item *ngIf="commune" [commune]="commune">
-            <ion-thumbnail slot="start">
-                <img src="https://unsplash.it/150/150" />
-              </ion-thumbnail>
-              <ion-label>
-                <h3>{{ commune.nom }}</h3>
-                <p>{{ commune.code }}</p>
-                <p>Population : {{ commune.population }} habitants</p>   
-              </ion-label>
-            <div>
-                <div style="display:inline; width:30%">
-                </div>
-                <div style="display:inline; width:70%">
-                </div>
+        <div *ngIf="commune == undefined">
+            <h1>Cliquez ici pour redécouvrir votre commune</h1>
+            <div class="button-geolocate" >
+                <ion-button (click)="geolocateMe()">Je géolocalise ma commune</ion-button>
             </div>
-        </ion-item>
+        </div>
+        
+        <div *ngIf="commune">
+            <h1>Vous êtes à {{ commune.nom }} ({{ commune.code }})</h1>
+            <div style="display:flex; justify-content:center; text-align:left">
+                <table width="500px">
+                    <tbody>
+                        <tr>
+                            <td><b>Population</b></td>
+                            <td>{{ commune.population }} habitants</td>
+                        </tr>
+                        <tr>
+                            <td><b>Code postal</b></td>
+                            <td>{{ commune.code }}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Département</b></td>
+                            <td>{{ commune.codeDepartement }}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Région</b></td>
+                            <td>{{ commune.codeRegion }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="margin-top:50px">
+                <h2>Un petit point météo</h2>
+                <a href="{{ url_block }}"><img src="{{ url_img }}" width="650" height="250" /></a>
+            </div>
+        </div>   
     </ion-card>
 </div>
