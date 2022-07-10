@@ -1,0 +1,9 @@
+<div id="top_communes_div">
+  <h1>Les Communes les plus notées !</h1>
+  <app-commune *ngFor="let commune of communes" [commune]="commune"></app-commune>
+  <div *ngIf="!communes?.length">
+    empty
+  </div>
+</div>
+
+

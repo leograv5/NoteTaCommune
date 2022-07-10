@@ -1,21 +1,20 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Note ta commune
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Note ta commune</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="false">
 
   <div id="container">
-    <strong>Ready to noter ta commune ?</strong>
-    <p>Let's do noter ta commune <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">Note ta commune</a></p>
-    <test-balise></test-balise>
+    <app-communes></app-communes>
+    <div>
+      <ion-card id="bandeau-home-page">
+        <ion-card-content>
+          <div style="width:35%; margin:auto;">
+            <h1><i>"Qui ne se renseigne point sur sa commune est un sot !"</i></h1>
+            <h2 style="text-align:right"><i>Ghandi</i></h2>
+            <img src="https://static.lpnt.fr/images/2022/04/05/23029844lpw-23030629-article-jpg_8675054_660x287.jpg" alt="ss">
+          </div>
+          <div>
+            <ion-button href="/note-commune">Je note ma commune !</ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
   </div>
 </ion-content>

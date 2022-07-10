@@ -18,6 +18,10 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
+
+  it('should work', () => {
+    expect(true).toBeTruthy();
+  });
   // TODO: add more tests!
 
 });

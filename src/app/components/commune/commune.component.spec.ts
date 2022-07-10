@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { CommunePage } from './commune.page';
+import { CommuneComponent } from './commune.component';
 
-describe('CommunePage', () => {
-  let component: CommunePage;
-  let fixture: ComponentFixture<CommunePage>;
+describe('CommuneComponent', () => {
+  let component: CommuneComponent;
+  let fixture: ComponentFixture<CommuneComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CommunePage ],
+      declarations: [ CommuneComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CommunePage);
+    fixture = TestBed.createComponent(CommuneComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
